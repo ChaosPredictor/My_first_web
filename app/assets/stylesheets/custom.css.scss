@@ -23,7 +23,7 @@ textarea {
 }
 
 .center h1 {
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
 }
 
 .NavBar{
@@ -41,6 +41,7 @@ background-color:transparent;
 border:solid 0px #c3c3c3;
 width:98px;
 height:60px;}
+
 .meanmenulink {
 text-decoration:none;
 color:#0000D0;
@@ -52,6 +53,7 @@ font-family:Courier New;}
 
 .meanmenudivmouseon {color:#000000;
 text-decoration: none;}
+
 #blogspace{
 margin-top:20px;}
 
@@ -65,15 +67,49 @@ font-style:italic;
 color:#B76FFF;
 font-size:32px;
 /*margin-top:5px*/
-margin-top:7px}
+/*margin-top:7px*/}
+
 .footer, .push {
 height: 20px;  /*.push must be the same height as .footer */
 position:absolute;
 right:10px;
 bottom:30px}
+
 .blogspace{
 font-family:Comic Sans MS;
 font-weight:bold;
-margin-top:10px;}
+/*margin-top:10px;*/}
+
 .meandiv {
 text-decoration:none;}
+
+.NavBarRightText{
+margin-top:2px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}

@@ -5,10 +5,7 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  
-  <!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->  
+  <%= render 'layouts/shim' %>
   
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8" name="Author">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
@@ -35,11 +32,16 @@
    
 </head>
 <body>
-
-	
-   	<div id="BlackNavBar" class="row-fluid NavBar">
-		<title class="span12">  no user logged </title>
-	</div>
+	<%= render 'layouts/header' %>
+		<div id="BlackNavBar" class="row-fluid NavBar">
+			<div class="container">
+				<nav class="nav pull-right NavBarRightText">
+					<title class="span8">  No user logged </title>
+					<title class="span2">  Exit </title>					
+					<title class="span2">  More </title>
+				</nav>
+			</div>
+		</div>
 	
    	<div id="Firsttilte" class="row-fluid">
 		<title class="span12 commontitleclass">  <%= full_title(yield(:title))%> </title>
