@@ -3,62 +3,11 @@
 
 	<div class="row meandiv">
 	
-		<div class="span2 meandiv2">
-
-			<a class="meanmenulink" style="text-decoration:none" href="blog.html">
-				<div  id="div1" class="meanmenudiv">Blog</div>
-			</a>
-			
-			<a class="meanmenulink" style="text-decoration:none" href="img/Ztp4sohuWf4.jpg">
-				<div  id="div2" class="meanmenudiv">My pic</div>
-			</a> 
-
-			<a class="meanmenulink" style="text-decoration:none" href="forfun.html">
-				<div  id="div3" style="text-decoration:none" class="meanmenudiv">for Fun</div>
-			</a>
-			
-			<a class="meanmenulink" style="text-decoration:none" href="tolearn.html">
-				<div  id="div4" class="meanmenudiv">to Learn</div>
-			</a>
-			
-			<a class="meanmenulink" style="text-decoration:none" href="todo.html">
-				<div  id="div5" class="meanmenudiv">to Do</div>
-			</a>
-			
-			<a class="meanmenulink" style="text-decoration:none" href="sites.html">
-				<div  id="div6" class="meanmenudiv">Sites</div>
-			</a>
- 
-			<a class="meanmenulink" style="text-decoration:none" href="help">
-				<div  id="div7" class="meanmenudiv">Help</div>
-			</a>
-			
-			<a class="meanmenulink" style="text-decoration:none" href="about">
-				<div  id="div8" class="meanmenudiv">
-					About
-				</div>
-			</a> 
-
-		</div>
+		<%= render 'layouts/mainmenu' %>
 		
-	    <div class="span8 blogspace" id="blogspace">
-		    <p>
-			This site was opened without any defined target, it's just kind of toy box for me. <br>
-			This days I try to adjust it as my blog to next year. For any suggestions or requests please send email to DmitryKuznichov at gmail. <br>
-			All the best</p>
-	    </div>
-	
-	    <div class="span2"> 
-		    <form class="loginbox form-inline well">
-			    <input type="text" class="input-small" style="margin-bottom:2px" placeholder="Email">  
-			    <input type="password" class="input-small" style="margin-top:2px; margin-bottom:2px" placeholder="Password">  
-			    <label class="checkbox" size="5px"  style="margin-top:2px;margin-bottom:2px">  
-				    <input type="checkbox"> Remember me  
-		    	</label>  
-			    <button type="submit" class="btn" style="width:85px;margin-top:2px;margin-bottom:2px">Sign in</button>  
-			    <button type="submit" class="btn" style="width:85px;margin-top:2px;padding-left:4px;padding-right:4px">New? Join</button> 
-			</form>
-	    </div>
+		<%= render 'layouts/frontpage' %>
+		
+		<%= render 'layouts/loginbox' %>
 		
 	</div>
 
