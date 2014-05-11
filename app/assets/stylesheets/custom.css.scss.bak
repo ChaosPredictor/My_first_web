@@ -23,7 +23,7 @@ textarea {
 }
 
 .center h1 {
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
 }
 
 .NavBar{
@@ -67,9 +67,9 @@ font-style:italic;
 color:#B76FFF;
 font-size:32px;
 /*margin-top:5px*/
-margin-top:7px}
+/*margin-top:7px*/}
 
-.footer, .push {   
+.footer, .push {
 height: 20px;  /*.push must be the same height as .footer */
 position:absolute;
 right:10px;
@@ -78,7 +78,7 @@ bottom:30px}
 .blogspace{
 font-family:Comic Sans MS;
 font-weight:bold;
-margin-top:10px;}
+/*margin-top:10px;*/}
 
 .meandiv {
 text-decoration:none;}
@@ -110,6 +110,6 @@ h2 {
 }
 
 p {
-  font-size: 1.1em; 
- /* line-height: 1.7em;*/
+  font-size: 1.1em;
+  line-height: 1.7em;
 }

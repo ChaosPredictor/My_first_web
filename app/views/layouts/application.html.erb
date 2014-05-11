@@ -14,34 +14,13 @@
   <link rel="stylesheet" type="text/css" href="twitter-bootstrap/css/bootstrap-responsive.css" >
   <link rel="stylesheet" type="text/css" href="twitter-bootstrap/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="css/common.css" /> 
-  
-  <script> 
-   $(function(){
-      $("#includedFooter").load("footer.html"); 
-    });
-  </script>  
-  
-  <style type="text/css">
-   body
-   {
-	  background-image:url("img/background3_mini_large_colorD_offsetE.bmp"), url("img/background_mini_large_colorD_offsetE.bmp");
-	  background-repeat:no-repeat, repeat;
-   }
-   </style>
-   
+    
+  <%= render 'layouts/background' %>	
    
 </head>
 <body>
 	<%= render 'layouts/header' %>
-		<div id="BlackNavBar" class="row-fluid NavBar">
-			<div class="container">
-				<nav class="nav pull-right NavBarRightText">
-					<title class="span8">  No user logged </title>
-					<title class="span2">  Exit </title>					
-					<title class="span2">  More </title>
-				</nav>
-			</div>
-		</div>
+
 	
    	<div id="Firsttilte" class="row-fluid">
 		<title class="span12 commontitleclass">  <%= full_title(yield(:title))%> </title>
@@ -52,8 +31,7 @@
 	
     <div class="push"></div>
     
-	<div class="footer">
-        <footer id="includedFooter"></footer>
-    </div>
+	<%= render 'layouts/footer' %>
+
 </body>
 </html>
