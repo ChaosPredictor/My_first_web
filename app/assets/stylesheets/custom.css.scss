@@ -2,6 +2,10 @@
 
 /* universal */
 
+$White: #FFFFFF;
+
+$Black: #000000;
+
 html {
   /*overflow-y: scroll;*/
 }
@@ -20,16 +24,15 @@ textarea {
 
 .center {
   text-align: center;
-}
-
-.center h1 {
-  margin-bottom: 10px;
+  h1 {
+    margin-bottom: 10px;
+  }
 }
 
 .NavBar{
-background-color:#000000;
+background-color: $Black;
 height:28px;
-color:#FFFFFF;
+color: $White;
 }
 
 .meanmenudiv {
@@ -51,7 +54,7 @@ height:100px;
 font-style:italic;
 font-family:Courier New;}
 
-.meanmenudivmouseon {color:#000000;
+.meanmenudivmouseon {color:$Black;
 text-decoration: none;}
 
 #blogspace{
@@ -112,4 +115,20 @@ h2 {
 p {
   font-size: 1.1em; 
  /* line-height: 1.7em;*/
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 }
