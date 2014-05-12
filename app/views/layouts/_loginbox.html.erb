@@ -5,7 +5,9 @@
 	    <label class="checkbox" size="5px"  style="margin-top:2px;margin-bottom:2px">  
 		    <input type="checkbox"> Remember me  
     	</label>  
-	    <button type="submit" class="btn" style="width:85px;margin-top:2px;margin-bottom:2px">Sign in</button>  
-	    <button type="submit" class="btn" style="width:85px;margin-top:2px;padding-left:4px;padding-right:4px">New? Join</button> 
+	    <button type="submit" class="btn SingIn">Sign in</button>  
+	    <%= link_to signup_path do %> 
+			<button type="submit" class="btn SingUp">New? Join</button> 
+		<% end %>
 	</form>
 </div>
