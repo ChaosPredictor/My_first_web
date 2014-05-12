@@ -24,14 +24,17 @@
 				<div  id="div6" class="meanmenudiv">Sites</div>
 			</a>
  
-			<a class="meanmenulink" style="text-decoration:none" href="help">
-				<div  id="div7" class="meanmenudiv">Help</div>
+			<a class="meanmenulink">
+				<%= link_to help_path do %> 
+					<div  id="div7" class="meanmenudiv" style="text-decoration:none">Help</div>
+				<% end %>
 			</a>
 			
-			<a class="meanmenulink" style="text-decoration:none" href="about_path">
-				<div  id="div8" class="meanmenudiv">
-					About
-				</div>
-			</a> 
-
+			<a class="meanmenulink">
+				<%= link_to about_path do %> 
+					<div  id="div8" class="meanmenudiv" style="text-decoration:none">About</div>
+				<% end %>
+			</a>
+			
+			
 		</div>
