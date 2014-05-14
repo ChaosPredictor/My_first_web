@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)    # Not the final implementation!
     if @user.save
-      # Handle a successful save.
+	  flash[:success] = "Welcome to the My First Web!"
+      redirect_to @user
     else
       render 'new'
     end
