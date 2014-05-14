@@ -43,8 +43,117 @@ describe "UserPages" do
         expect { click_button submit }.to change(User, :count).by(1)
       end
     end
-  end
+	
+	#Name
+	describe "with valid information - name blank" do
+      before do
+        fill_in "Name",         with: ""
+        fill_in "Email",        with: "user@example.com"
+        fill_in "Password",     with: "foobar"
+        fill_in "Confirmation", with: "foobar"
+      end
 
+      it "should create a user" do
+        expect { click_button submit }.not_to change(User, :count)
+      end
+    end
+
+
+	describe "with valid information - name too long" do
+      before do
+        fill_in "Name",         with: "ExampleUserAbcde"
+        fill_in "Email",        with: "user@example.com"
+        fill_in "Password",     with: "foobar"
+        fill_in "Confirmation", with: "foobar"
+      end
+
+      it "should create a user" do
+        expect { click_button submit }.not_to change(User, :count)
+      end
+    end
+	
+	describe "with valid information - name too short" do
+      before do
+        fill_in "Name",         with: "Abc"
+        fill_in "Email",        with: "user@example.com"
+        fill_in "Password",     with: "foobar"
+        fill_in "Confirmation", with: "foobar"
+      end
+
+      it "should create a user" do
+        expect { click_button submit }.not_to change(User, :count)
+      end
+    end
+	
+	#Email
+	describe "with valid information - email wrong" do
+      before do
+        fill_in "Name",         with: "Example User"
+        fill_in "Email",        with: "user@example"
+        fill_in "Password",     with: "foobar"
+        fill_in "Confirmation", with: "foobar"
+      end
+
+      it "should create a user" do
+        expect { click_button submit }.not_to change(User, :count)
+      end
+    end
+	
+	describe "with valid information - email blank" do
+      before do
+        fill_in "Name",         with: "Example User"
+        fill_in "Email",        with: ""
+        fill_in "Password",     with: "foobar"
+        fill_in "Confirmation", with: "foobar"
+      end
+
+      it "should create a user" do
+        expect { click_button submit }.not_to change(User, :count)
+      end
+    end
+	
+
+	#Password
+	describe "with valid information - password not same" do
+      before do
+        fill_in "Name",         with: "Example User"
+        fill_in "Email",        with: "user@example.com"
+        fill_in "Password",     with: "foobar"
+        fill_in "Confirmation", with: "foobag"
+      end
+
+      it "should create a user" do
+        expect { click_button submit }.not_to change(User, :count)
+      end
+    end	
+
+	describe "with valid information - password to short" do
+      before do
+        fill_in "Name",         with: "Example User"
+        fill_in "Email",        with: "user@example.com"
+        fill_in "Password",     with: "foobar"
+        fill_in "Confirmation", with: "foobag"
+      end
+
+      it "should create a user" do
+        expect { click_button submit }.not_to change(User, :count)
+      end
+    end	
+
+	describe "with valid information - password blank" do
+      before do
+        fill_in "Name",         with: "Example User"
+        fill_in "Email",        with: "user@example.com"
+        fill_in "Password",     with: ""
+        fill_in "Confirmation", with: ""
+      end
+
+      it "should create a user" do
+        expect { click_button submit }.not_to change(User, :count)
+      end
+    end	
+	
+  end
 end
 
 
