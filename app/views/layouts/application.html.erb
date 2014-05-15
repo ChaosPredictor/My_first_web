@@ -2,9 +2,6 @@
 <html>
 <head>
   <title>My First Web</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
   
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8" name="Author">
@@ -15,6 +12,10 @@
   <link rel="stylesheet" type="text/css" href="twitter-bootstrap/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="assets/common.css" /> 
     
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>	
+	
   <%= render 'layouts/background' %>
    
 </head>
@@ -22,9 +23,11 @@
 	<%= render 'layouts/header' %>
 
     <div class="container">
-		<% flash.each do |key, value| %>
-			<div class="alert alert-<%= key %>"><%= value %></div>
-		<% end %>
+	
+	    <% flash.each do |key, value| %>
+            <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+        <% end %>
+	
 	
 		<div id="Firsttilte" class="row-fluid">
 			<title class="span12 commontitleclass">  <%= full_title(yield(:title))%> </title>	
