@@ -55,13 +55,14 @@ height:60px;}
 text-decoration:none;
 color:#0000D0;
 font-weight:bold;
-width:161px;
-height:100px;
+/*width:161px;
+height:100px;*/
 font-style:italic;
 font-family:Courier New;}
 
-.meanmenudivmouseon {color:$Black;
-text-decoration: none;}
+/*.meanmenudivmouseon {
+color:$Black;
+text-decoration: none;}*/
 
 #blogspace{
 margin-top:20px;}
@@ -75,8 +76,7 @@ font-style:italic;
 /*text-decoration:underline;*/
 color:#B76FFF;
 font-size:32px;
-/*margin-top:5px*/
-margin-top:7px}
+margin-top:15px;}
 
 .footer, .push {   
 height: 20px;  /*.push must be the same height as .footer */
@@ -139,15 +139,16 @@ p {
   }
 }
 
-.btn {
-  width:105px;
-  margin-top:2px;
+.btn-LoginBox {
+  width:110px;
+  margin-top:4px;
+  margin-left:0px;
+  margin-right:0px;
   SingIn{
     margin-bottom:2px;
   };
   SingUp{
-    padding-left:4px;
-    padding-right:4px;
+
   }	
 }
 
@@ -228,6 +229,7 @@ text-decoration:none;}
 
 .loginbox{
 background-color:#CC88FF;
-padding-right:9px;
+padding-right:10px;
+padding-left:10px;
 border:solid 2px #000000;
 }

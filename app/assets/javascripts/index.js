@@ -126,17 +126,21 @@
     $("#div7").hover(function(){
       $("#div7").css("background-color","#DF30F0");
       $("#div7").css("color","#000000");
+	  $("#div7").css("text-decoration","none");
                 },function(){
       $("#div7").css("background-color","transparent");
       $("#div7").css("color","#0000D0"); 
+	  $("#div7").css("text-decoration","none");
     });
 	
     $("#div8").hover(function(){
       $("#div8").css("background-color","#FF10F0");
       $("#div8").css("color","#000000");
+  	  $("#div8").css("text-decoration","none");
                 },function(){
       $("#div8").css("background-color","transparent");
-      $("#div8").css("color","#0000D0");    
+      $("#div8").css("color","#0000D0"); 
+  	  $("#div8").css("text-decoration","none");	  
 	});
 	
 			
