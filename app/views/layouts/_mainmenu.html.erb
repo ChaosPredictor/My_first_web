@@ -20,10 +20,12 @@
 				<div  id="div5" class="meanmenudiv">to Do</div>
 			</a>
 			
-			<a class="meanmenulink" style="text-decoration:none" href="sites.html">
-				<div  id="div6" class="meanmenudiv">Sites</div>
+			<a class="meanmenulink">
+				<%= link_to signin_path do %> 
+					<div  id="div6" class="meanmenudiv" style="text-decoration:none">SingIn</div>
+				<% end %>
 			</a>
- 
+			
 			<a class="meanmenulink">
 				<%= link_to help_path do %> 
 					<div  id="div7" class="meanmenudiv" style="text-decoration:none">Help</div>
