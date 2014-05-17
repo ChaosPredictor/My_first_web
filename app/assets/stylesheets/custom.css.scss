@@ -139,18 +139,42 @@ p {
   }
 }
 
-.btn-LoginBox {
-  width:110px;
-  margin-top:4px;
-  margin-left:0px;
-  margin-right:0px;
-  SingIn{
-    margin-bottom:2px;
-  };
-  SingUp{
-
-  }	
+.loginbox{
+  background-color:#CC88FF;
+  border:solid 2px #000000;
+  padding-left:19px;
+  padding-right:19px;
+  padding-top:19px;
+  width: 110px;
 }
+
+.inloginbox{
+  width:110px;  
+}
+
+.inloginbox-btn{
+  width:110px;  
+  margin-top:8px;
+}
+
+.inloginbox-inpt{
+  width:110px;  
+  margin-top:8px;
+}
+
+.inloginbox-inpt-eml{
+  width:110px;  
+  margin-top:0px;
+}
+.inloginbox-chbx{
+  width:110px;  
+  margin-top:8px;
+}
+
+
+
+
+
 
 /* miscellaneous */
 
@@ -227,9 +251,3 @@ width:98px;
 margin-right:42px;
 text-decoration:none;}
 
-.loginbox{
-background-color:#CC88FF;
-padding-right:10px;
-padding-left:10px;
-border:solid 2px #000000;
-}

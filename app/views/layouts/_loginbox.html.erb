@@ -1,13 +1,15 @@
 <div class="span2"> 
-    <form class="loginbox form-inline well">
-	    <input type="text" class="input-small" style="margin-bottom:2px" placeholder="Email">  
-	    <input type="password" class="input-small" style="margin-top:2px; margin-bottom:2px" placeholder="Password">  
-	    <label class="checkbox" size="5px"  style="margin-top:2px;margin-bottom:2px">  
-		    <input type="checkbox"> Remember me  
-    	</label>  
-	    <button type="submit" class="btn-LoginBox SingIn">Sign in</button>  
-	    <%= link_to signup_path do %> 
-			<button type="submit" class="btn-LoginBox SingUp">New? Join</button> 
-		<% end %>
+    <form class="form-inline well loginbox">
+	    <div   style="width:110px">
+			<input type="text" class="inloginbox-inpt-eml input-small" placeholder="Email">  
+			<input type="password" class="inloginbox-inpt input-small" placeholder="Password">  
+			<label class="inloginbox-chbx checkbox" size="5px">  
+				<input type="checkbox"> Remember me  
+			</label>  
+			<button type="submit" class="inloginbox-btn SingIn">Sign in</button>  
+			<%= link_to signup_path do %> 
+				<button type="submit" class="inloginbox-btn SingUp">New? Join</button> 
+			<% end %>
+		</div>
 	</form>
 </div>
