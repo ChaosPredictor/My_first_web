@@ -1,22 +1,29 @@
-<div id="BlackNavBar" class="row-fluid NavBar">
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
 	<div class="container">
-        <%= link_to "Home", root_path %>
-		<nav class="nav pull-right NavBarRightText">
-          <% if signed_in? %>
-            <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Account <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-                <li class="divider"></li>
-                <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
-              </ul>
-            </li>
-          <% else %>
-            <li><%= link_to "Sign in", signin_path %></li>
-          <% end %>
-		</nav>
+	  <nav class="nav pull-left NavBarLeftText">
+        <li><%= link_to "Home", root_path,{:style=>'padding-top: 2px; padding-bottom: 2px;'} %></li>		
+        <li><%= link_to "Help", help_path,{:style=>'padding-top: 2px; padding-bottom: 2px;'} %></li>	  
+	  </nav>
+	  <nav class="nav pull-right NavBarRightText">
+        <% if signed_in? %>
+		  <li><%= link_to "Users", users_path,{:style=>'padding-top: 2px; padding-bottom: 2px;'} %></li>
+          <li id="fat-menu" class="dropdown" >
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style='padding-top: 2px; padding-bottom: 2px;'>
+              Account <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Profile", current_user %></li>
+              <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+              <li class="divider"></li>
+              <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to "Sign in", signin_path,{:style=>'padding-top: 2px; padding-bottom: 2px;'} %></li>
+		  <li><%= link_to "Sign up", signup_path,{:style=>'padding-top: 2px; padding-bottom: 2px;'} %></li>
+        <% end %>
+	  </nav>
 	</div>
-</div>
+  </div>
+</header>

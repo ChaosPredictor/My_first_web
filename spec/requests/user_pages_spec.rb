@@ -4,6 +4,33 @@ describe "UserPages" do
   
   subject { page }
 
+  #Show all users
+  describe "index" do
+    let(:user) { FactoryGirl.create(:user) }
+    before(:each) do
+      sign_in user
+      visit users_path
+    end
+
+    it { should have_title('All users') }
+    it { should have_content('All users') }
+
+    describe "pagination" do
+
+      before(:all) { 30.times { FactoryGirl.create(:user) } }
+      after(:all)  { User.delete_all }
+
+      it { should have_selector('div.pagination') }
+
+      it "should list each user" do
+        User.paginate(page: 1).each do |user|
+          expect(page).to have_selector('li', text: user.name)
+        end
+      end
+    end
+  end  
+   
+  #Profile - Show single user
   describe "profile page" do
     let(:user) { FactoryGirl.create(:user) }
     before { visit user_path(user) }
@@ -12,6 +39,7 @@ describe "UserPages" do
     it { should have_title(user.name) }
   end
 
+  #Signup
   describe "signup page" do
     before { visit signup_path }
 
@@ -19,6 +47,7 @@ describe "UserPages" do
     it { should have_title(full_title('Sign up')) }
   end
   
+  #Signin
   describe "signup" do
 
     before { visit signup_path }
@@ -177,8 +206,7 @@ describe "UserPages" do
     end	
   end
   
-  
-		#Edit
+  #Edit		
   describe "edit" do
     let(:user) { FactoryGirl.create(:user) }
 	before { sign_in user }
@@ -214,6 +242,25 @@ describe "UserPages" do
       specify { expect(user.reload.email).to eq new_email }
     end	
 	
+  end
+  
+  #Index - Show all users
+  describe "index" do
+    before do
+      sign_in FactoryGirl.create(:user)
+      FactoryGirl.create(:user, name: "Bobb", email: "bob@example.com")
+      FactoryGirl.create(:user, name: "Benn", email: "ben@example.com")
+      visit users_path
+    end
+
+    it { should have_title('All users') }
+    it { should have_content('All users') }
+
+    it "should list each user" do
+      User.all.each do |user|
+        expect(page).to have_selector('li', text: user.name)
+      end
+    end
   end
   
 end

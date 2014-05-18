@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  padding-top: 0px;
+  padding-top: 26px; /* SHOULD BE AS .navbar-inner !!!!!  */
 }
 
 section {
@@ -76,7 +76,7 @@ font-style:italic;
 /*text-decoration:underline;*/
 color:#B76FFF;
 font-size:32px;
-margin-top:15px;}
+margin-top:10px;}
 
 .footer, .push {   
 height: 20px;  /*.push must be the same height as .footer */
@@ -250,4 +250,26 @@ input {
 width:98px;
 margin-right:42px;
 text-decoration:none;}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
+}
+
+.navbar-inner{
+  min-height: 26px;
+  height: 26px;
+  max-height: 26px;
+}
+
 
