@@ -4,7 +4,8 @@ namespace :db do
     User.create!(name: "Example",
                  email: "example@railstutorial.org",
                  password: "foobar",
-                 password_confirmation: "foobar")
+                 password_confirmation: "foobar",
+				 admin: true)
     99.times do |n|
       name  = "Dima-#{n+1}"
       email = "example-#{n+1}@railstutorial.org"
