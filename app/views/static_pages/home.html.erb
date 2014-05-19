@@ -1,5 +1,28 @@
 <% provide(:title, '') %>
 <div class="container">
+  
+  <% if signed_in? %>
+  
+	<div class="row meandiv">
+	
+	  <%= render 'layouts/mainmenu' %>
+		
+	  <section>
+        <%= render 'shared/user_info' %>
+      </section>
+	  
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+	  
+	  <div class="span8">
+        <h3>Micropost Feed</h3>
+        <%= render 'shared/feed' %>
+      </div>
+
+	</div>
+	
+  <% else %>
 
 	<div class="row meandiv">
 	
@@ -10,5 +33,9 @@
 		<%= render 'layouts/loginbox' %>
 		
 	</div>
+	
+	<%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+	
+  <% end %>
 
 </div>
