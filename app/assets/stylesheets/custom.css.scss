@@ -36,20 +36,21 @@ textarea {
 }
 
 .NavBar{
-background-color: $Black;
-height:28px;
-color: $White;
+  background-color: $Black;
+  height:28px;
+  color: $White;
 }
 
 .meanmenudiv {
-vertical-align:middle;
-font-size:17px;
-line-height:3em;
-padding-left:12px;
-background-color:transparent;
-border:solid 0px #c3c3c3;
-width:98px;
-height:60px;}
+  vertical-align:middle;
+  font-size:17px;
+  line-height:3em;
+  padding-left:12px;
+  background-color:transparent;
+  border:solid 0px #c3c3c3;
+  width:98px;
+  height:60px;
+}
 
 .meanmenulink {
 text-decoration:none;
@@ -247,9 +248,10 @@ input {
 }
 
 .meandiv2 {
-width:98px;
-margin-right:42px;
-text-decoration:none;}
+  width:98px;
+  margin-right:42px;
+  text-decoration:none;
+}
 
 /* Users index */
 
@@ -283,6 +285,7 @@ text-decoration:none;}
     border-top: 1px solid #e8e8e8;
   }
 }
+
 .content {
   display: block;
 }
@@ -298,4 +301,10 @@ aside {
     height: 100px;
     margin-bottom: 5px;
   }
+}
+
+.MicroPostField{
+  background-color:transparent;
+  font-weight:bold;
+  font-family:Courier New;  
 }
