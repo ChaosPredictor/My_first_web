@@ -3,8 +3,16 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+/*header*/
 .navbar-inner{
   min-height: 26px;
   height: 26px;
   max-height: 26px;
 }
+
+
+/*main-body*/
+body {
+  padding-top: 26px; /* SHOULD BE AS .navbar-inner !!!!!  */
+}
+
