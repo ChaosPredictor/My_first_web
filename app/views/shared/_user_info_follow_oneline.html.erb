@@ -1,0 +1,37 @@
+<section>	
+	<div class="span5">
+		<%= link_to gravatar_for(current_user, size: 52), current_user %>
+		<h1>
+			<%= link_to current_user.name, current_user%>
+		</h1>
+	</div>
+	<div class="span2">		
+		<span>
+			<%= pluralize(current_user.microposts.count, "micropost") %>
+		</span>
+
+		<% @user ||= current_user %>
+		<div class="stats">
+			<a href="<%= following_user_path(@user) %>">
+				<strong id="following" class="stat">
+					<%= @user.followed_users.count %>
+				</strong>
+				following
+			</a>
+			<a href="<%= followers_user_path(@user) %>">
+				<strong id="followers" class="stat">
+					<%= @user.followers.count %>
+				</strong>
+				followers
+			</a>
+		</div>
+	</div>
+</section>	
+
+
+
+
+
+
+
+

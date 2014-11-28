@@ -28,10 +28,13 @@
             <%= content_tag(:div, value, class: "alert alert-#{key}") %>
         <% end %>
 	
-	
-		<div id="Firsttilte" class="row-fluid">
-			<title class="span12 commontitleclass">  <%= full_title(yield(:title))%> </title>	
-		</div>
+		<% if not signed_in? %>
+			<div id="Firsttilte" class="row-fluid">
+				<title class="span12 commontitleclass">  <%= full_title(yield(:title))%> </title>	
+			</div>
+		<% else %>	
+			<div style="margin-top:42px;" > </div>
+		<% end %>	
 
 		<%= yield %>
 
