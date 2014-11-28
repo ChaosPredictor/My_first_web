@@ -31,33 +31,67 @@ textarea {
     margin-bottom: 10px;
   }
 }
-/*
+
 .NavBar{
   background-color: $Black;
   height:28px;
   color: $White;
-}*/
+}
 
+.meanmenudiv {
+  vertical-align:middle;
+  font-size:17px;
+  line-height:3em;
+  padding-left:12px;
+  background-color:transparent;
+  border:solid 0px #c3c3c3;
+  width:98px;
+  height:60px;
+}
+
+.meanmenulink {
+text-decoration:none;
+color:#0000D0;
+font-weight:bold;
+/*width:161px;
+height:100px;*/
+font-style:italic;
+font-family:Courier New;}
+
+/*.meanmenudivmouseon {
+color:$Black;
+text-decoration: none;}*/
 
 #blogspace{
-  margin-top:20px;
-}
+margin-top:20px;}
 
+.commontitleclass{
+line-height:1em;
+font-family:'Times New Roman';
+text-align:center;
+font-weight:bold;
+font-style:italic;
+/*text-decoration:underline;*/
+color:#B76FFF;
+font-size:32px;
+margin-top:10px;}
 
+.footer, .push {   
+height: 20px;  /*.push must be the same height as .footer */
+position:absolute;
+right:10px;
+bottom:30px}
 
 .blogspace{
-  font-family:Comic Sans MS;
-  font-weight:bold;
-  margin-top:10px;
-}
+font-family:Comic Sans MS;
+font-weight:bold;
+margin-top:10px;}
 
-/*
 .meandiv {
-  text-decoration:none;
-}*/
+text-decoration:none;}
 
 .NavBarRightText{
-  margin-top:2px;
+margin-top:2px;
 }
 
 /* typography */
@@ -241,6 +275,11 @@ input {
   @extend .error;
 }
 
+.meandiv2 {
+  width:98px;
+  margin-right:42px;
+  text-decoration:none;
+}
 
 /* Users index */
 

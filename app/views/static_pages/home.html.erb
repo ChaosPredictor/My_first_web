@@ -1,15 +1,28 @@
 <% provide(:title, '') %>
 <div class="container">
-
-	<% if signed_in? %>
-
-		<div class="row meandiv">
+  
+  <% if signed_in? %>
+  
+	<div class="row meandiv">
 	
-		<%= render 'layouts/home/menu' %>
+	  <%= render 'layouts/mainmenu' %>
 		
-		<%= render 'layouts/home/user' %>
-		
-		<%= render 'layouts/home/loginbox' %>		
+	  <section>
+        <%= render 'shared/user_info' %>
+      </section>
+	  
+      <section>
+        <%= render 'shared/stats' %>
+      </section>	  
+	  
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+	  
+	  <div class="span8">
+        <h3>Micropost Feed</h3>
+        <%= render 'shared/feed' %>
+      </div>
 
 	</div>
 	
