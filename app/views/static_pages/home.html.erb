@@ -1,5 +1,5 @@
-<% provide(:title, '') %>
-<div class="container">
+<% provide(:title, @title) %>
+<div class="">
 
 	<% if signed_in? %>
 
@@ -8,8 +8,7 @@
 		<%= render 'layouts/home/menu' %>
 		
 		<%= render 'layouts/home/user' %>
-		
-		<%= render 'layouts/home/loginbox' %>		
+			
 
 	</div>
 	
@@ -21,7 +20,6 @@
 		
 		<%= render 'layouts/frontpage' %>
 		
-		<%= render 'layouts/home/loginbox' %>
 		
 	</div>
 	

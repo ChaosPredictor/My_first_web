@@ -58,7 +58,7 @@ describe "StaticPages" do
   describe "Contact page" do
 	before { visit contact_path }	
   
-    it { expect(page).to have_content('kuzi81@gmail.com') }
+    it { expect(page).to have_content('kuzi81 at gmail') }
 	it { expect(page).to have_title(full_title('Contact')) }
   end   
 end

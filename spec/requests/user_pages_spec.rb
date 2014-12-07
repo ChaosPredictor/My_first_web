@@ -12,7 +12,7 @@ describe "UserPages" do
       visit users_path
     end
 
-    it { should have_title('All users') }
+    it { should have_title("All users") }
     it { should have_content('All users') }
 
     describe "pagination" do
@@ -294,7 +294,10 @@ describe "UserPages" do
     before { visit edit_user_path(user) }
 
     describe "page" do
-      it { should have_content("Update your profile") }
+      it { should have_content("Name") }
+	  it { should have_content("Email") }
+	  it { should have_content("Password") }
+	  it { should have_content("Confirm Password") }
       it { should have_title("Edit user") }
       it { should have_link('Change picture', href: 'http://gravatar.com/emails') }
     end
@@ -345,7 +348,7 @@ describe "UserPages" do
       visit users_path
     end
 
-    it { should have_title('All users') }
+    it { should have_title("All users") }
     it { should have_content('All users') }
 
     it "should list each user" do
